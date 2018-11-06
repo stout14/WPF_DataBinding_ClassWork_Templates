@@ -23,6 +23,7 @@ namespace WPF_DataBinding_ClassWork_Templates
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new Person { Age = 10, Name = "Bart" };
         }
     }
 }
