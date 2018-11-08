@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,6 +25,13 @@ namespace WPF_DataBinding_ClassWork_Templates
         {
             InitializeComponent();
             DataContext = new Person { Age = 10, Name = "Bart" };
+
+            _list.ItemsSource = new ObservableCollection<Person>
+            {
+                new Person {Name = "Bart", Age = 10},
+                new Person {Name = "Homer", Age = 45},
+                new Person {Name = "Marge", Age = 35}
+            };
         }
     }
 }
